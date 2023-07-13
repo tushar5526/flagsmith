@@ -9,8 +9,6 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: flagsmith
     container_name: flagsmith_postgres
-    ports:
-      - 5432:5432
 
   flagsmith:
     build:

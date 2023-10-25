@@ -67,8 +67,6 @@ jobs:
         run: make django-make-migrations
 
       - name: Run Tests
-        env:
-          DOTENV_OVERRIDE_FILE: .env-ci
         run: make test
 
       - name: Upload Coverage

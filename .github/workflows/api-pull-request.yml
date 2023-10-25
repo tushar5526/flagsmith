@@ -69,9 +69,7 @@ jobs:
       - name: Run Tests
         env:
           DOTENV_OVERRIDE_FILE: .env-ci
-        run:
-          make test
-          opts="segments/tests/test_permissions.py::SegmentPermissionsTestCase::test_project_admin_has_permission"
+        run: make test opts="segments/tests/test_permissions.py::SegmentPermissionsTestCase"
 
       - name: Upload Coverage
         uses: codecov/codecov-action@v3
